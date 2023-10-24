@@ -77,7 +77,7 @@ namespace Methods
             return number1 * number2 * number3;
         }
 
-        // params keyword
+        // params keyword : tek tek parametre tanımlamak yerine
         static int Add4(params int[] numbers)
         {
             return numbers.Sum();
