@@ -19,10 +19,10 @@ namespace Arrays
             // array sınırlarına dikkat etmelisin.
 
 
-            foreach (var student in students2)
-            {
-                Console.WriteLine(student);
-            }
+            //foreach (var student in students2)
+            //{
+            //    Console.WriteLine(student);
+            //}
 
 
             // Çok Boyutlu Diziler [satır, sütun]
@@ -34,6 +34,15 @@ namespace Arrays
                     {"Rize","Trabzon","Samsun" },
                     {"İzmir","Muğla","Manisa" },
                 };
+
+            for (int i = 0; i <= regions.GetUpperBound(0); i++)
+            {
+                for (int j = 0; j <= regions.GetUpperBound(1); j++)
+                {
+                    Console.WriteLine(regions[i, j]);
+                }
+                Console.WriteLine("************");
+            }
 
 
             Console.ReadLine();
