@@ -16,28 +16,35 @@ namespace Methods
 
             //var result = Add2(20);
 
-            int number1 = 20;
-            int number2 = 100;
-            var result2 = Add3(number1,number2);
-            Console.WriteLine(result2);
-            Console.WriteLine(number1); // number1=20
-            // metoda yalnızca değişkendeki değeri gönderiyoruz.
+            //int number1 = 20;
+            //int number2 = 100;
+            //var result2 = Add3(number1, number2);
+            //Console.WriteLine(result2);
+            //Console.WriteLine(number1); 
+            // number1=20
+            // metoda yalnızca değişkendeki değeri gönderiyoruz. (Değer tipler)
+            // Eğer metotta gönderdiğimiz değerin bulunduğu değişkeni de değiştirmek istiyorsak ref keyword ünü kullanırız.
+            // ref keyword ünün alternatifi out keyword üdür. Farkı ref te mutlaka değişkene değer atamalısın (set etmelisin), out ta böyle bir koşula gerek yok.
 
             //Console.WriteLine(result);
+            Console.WriteLine(Multiply(2, 4));
+            Console.WriteLine(Multiply(2, 4, 5));
+
+            Console.WriteLine(Add4(1,2,3,4,5,6));    
             Console.ReadLine();
         }
 
         // metotlar kod tekrarının önüne geçmemize yardımcı olur
         // Don't repeat yourself prensibi
-        static void Add() 
+        static void Add()
         {
             Console.WriteLine("Added!");
         }
 
-        static int Add2(int number1, int number2=30)
-            //(parametre)
+        static int Add2(int number1, int number2 = 30)
+        //(parametre)
         {
-            var result=number1+ number2;
+            var result = number1 + number2;
             return result;
 
             // return number1 + number2;
@@ -53,10 +60,27 @@ namespace Methods
 
         // Challenge
 
-        static int Add3(int number1,int number2)
+        static int Add3(int number1, int number2)
         {
             number1 = 30;
-            return number1+ number2;
+            return number1 + number2;
+        }
+
+        // Method Overloading
+
+        static int Multiply(int number1, int number2)
+        {
+            return number1 * number2;
+        }
+        static int Multiply(int number1, int number2, int number3)
+        {
+            return number1 * number2 * number3;
+        }
+
+        // params keyword
+        static int Add4(params int[] numbers)
+        {
+            return numbers.Sum();
         }
 
 
