@@ -20,7 +20,8 @@ namespace Methods
             int number2 = 100;
             var result2 = Add3(number1,number2);
             Console.WriteLine(result2);
-            Console.WriteLine(number1);
+            Console.WriteLine(number1); // number1=20
+            // metoda yalnızca değişkendeki değeri gönderiyoruz.
 
             //Console.WriteLine(result);
             Console.ReadLine();
