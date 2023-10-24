@@ -21,13 +21,26 @@ namespace Loops
 
 
             // While Döngüsü: Belli bir şart sağlanana kadar döngü çalışır.
-            int number = 100;
-            while (number>=0)
+            //int number = 100;
+            //while (number>=0)
+            //{
+            //    Console.WriteLine(number);
+            //    number--;
+            //    // Sonsuz döngü olmaması için döngünün içerisinde şarta müdahale etmek gerekir.
+            //}
+            //Console.WriteLine("Now number is {0}",number);
+
+
+            //Do-While Döngüsü
+            //Şarta bakmadan döngü bir kez çalışır.
+
+            int number = 10;
+            do
             {
                 Console.WriteLine(number);
                 number--;
-                // Sonsuz döngü olmaması için döngünün içerisinde şarta müdahale etmek gerekir.
-            }
+
+            } while (number>=11);
 
             Console.ReadLine();
         }
