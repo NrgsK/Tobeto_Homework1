@@ -34,13 +34,25 @@ namespace Loops
             //Do-While Döngüsü
             //Şarta bakmadan döngü bir kez çalışır.
 
-            int number = 10;
-            do
-            {
-                Console.WriteLine(number);
-                number--;
+            //int number = 10;
+            //do
+            //{
+            //    Console.WriteLine(number);
+            //    number--;
 
-            } while (number>=11);
+            //} while (number>=11);
+
+
+            //Foreach döngüsü 
+            // Dizi temelli verilerin içinde dolaşabilmek için kullanılır.
+
+
+            string[] students = new string[3] { "Engin", "Derin", "Salih" };
+            foreach (var student in students)
+            {
+                // Dizideki elemanları bu döngü içerisinde değiştiremeyiz.
+                Console.WriteLine(student);
+            }
 
             Console.ReadLine();
         }
